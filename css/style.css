@@ -1,0 +1,30 @@
+ :root{--night:#100b24;--lav:#d9c8ff;--pink:#f1c6e2;--muted:#c8bddb;--gold:#f3dfb7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;color:#fbf8ff;font-family:Georgia,"Times New Roman",serif;overflow-x:hidden;background:radial-gradient(ellipse at 50% 8%,rgba(111,75,174,.34),transparent 42%),radial-gradient(ellipse at 85% 65%,rgba(91,59,145,.2),transparent 35%),linear-gradient(180deg,#100b24,#17102f 58%,#100b24)}
+#sky{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}.star{position:absolute;border-radius:50%;background:white;opacity:.55;animation:twinkle 3.2s ease-in-out infinite alternate}
+@keyframes twinkle{to{opacity:.12;transform:scale(.55)}}.glow{position:absolute;width:250px;height:250px;border-radius:50%;background:rgba(156,119,226,.09);filter:blur(55px)}.glow.one{top:18%;left:-130px}.glow.two{right:-140px;top:58%;background:rgba(222,155,210,.08)}
+main{position:relative;z-index:1;width:min(700px,calc(100% - 34px));margin:auto}
+.topline{padding:24px 0;display:flex;justify-content:space-between;align-items:center;color:#bcaed4;font:10px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase}.topline span:last-child{color:#d8c7ff}
+.hero{min-height:83svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:30px 0 75px}
+.portrait-wrap{position:relative;width:clamp(190px,52vw,285px);aspect-ratio:4/5;margin:4px auto 30px;animation:portraitFloat 5s ease-in-out infinite}
+.portrait-halo{position:absolute;inset:5% -5%;border-radius:48%;background:rgba(183,145,255,.23);filter:blur(27px)}
+.portrait{position:relative;display:block;width:100%;height:100%;object-fit:cover;object-position:center 25%;border-radius:48% 48% 24px 24px;border:2px solid rgba(224,207,255,.7);box-shadow:0 0 0 7px rgba(198,168,255,.07),0 18px 55px #0006,0 0 35px rgba(180,139,255,.28)}
+.portrait-star{position:absolute;color:#f5e5ff;text-shadow:0 0 14px #d7baff}.star-a{top:13%;right:-12%;font-size:25px}.star-b{bottom:18%;left:-13%;font-size:22px}
+@keyframes portraitFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.eyebrow,.label{font:10px Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase;color:#c8b4ff}
+h1{font-size:clamp(49px,12vw,84px);font-weight:400;letter-spacing:-.055em;line-height:1.02;margin:18px 0}h1 em{font-style:italic;color:var(--pink)}
+.intro{max-width:470px;color:var(--muted);font-size:17px;line-height:1.85;margin:0 auto 27px}
+.pill{border:1px solid rgba(217,200,255,.25);border-radius:40px;padding:11px 17px;color:#dfd1ff;font:11px Arial,sans-serif;letter-spacing:.08em;background:rgba(255,255,255,.035)}
+button{border:1px solid #ffffff33;border-radius:30px;padding:14px 23px;background:linear-gradient(110deg,#d9c8ff,#efc8e5);color:#211630;font:13px Arial,sans-serif;letter-spacing:.04em;cursor:pointer;transition:transform .2s,box-shadow .2s}
+button:hover{transform:translateY(-2px);box-shadow:0 9px 30px #c2a0ff38}button:focus-visible{outline:2px solid white;outline-offset:4px}.hero button{margin-top:26px}
+.scroll{margin-top:48px;color:#9587ae;font:9px Arial,sans-serif;letter-spacing:.2em}
+section{padding:24px 0 50px}.card{padding:clamp(25px,6vw,43px);border-radius:24px;text-align:center;background:rgba(31,22,57,.72);border:1px solid #dbc7ff29;box-shadow:0 22px 75px #0003;backdrop-filter:blur(12px)}
+h2{font-size:clamp(29px,7vw,43px);font-weight:400;letter-spacing:-.035em;margin:14px 0 18px}.copy{color:#e7def2;font-size:17px;line-height:1.95}.copy .accent{color:var(--pink);font-style:italic}
+.rule{height:1px;width:42px;background:var(--gold);opacity:.7;margin:27px auto}.note{display:none;margin-top:24px;animation:fade .7s ease both}.note.show{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}.sign{font-size:21px;color:var(--pink);font-style:italic;margin-top:22px}
+.closing{text-align:center;padding:52px 0 72px}.heart{font-size:32px;color:#e9c9fa;display:inline-block;animation:beat 1.8s ease-in-out infinite}
+@keyframes beat{50%{transform:scale(1.16)}}.closing p{color:var(--muted);font-size:15px;line-height:1.8}
+footer{text-align:center;padding:0 0 28px;color:#817394;font:9px Arial,sans-serif;letter-spacing:.2em}
+.sparkle{position:fixed;top:-20px;z-index:4;pointer-events:none;animation:fall linear forwards}@keyframes fall{to{transform:translateY(110vh) rotate(440deg);opacity:0}}
+@media(max-width:520px){.topline{font-size:9px}.hero{min-height:80svh}.copy{font-size:16px}.card{border-radius:20px}.portrait-wrap{width:min(62vw,245px);margin-bottom:26px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;scroll-behavior:auto!important;transition:none!important}}
