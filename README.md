@@ -1,12 +1,12 @@
-# A Little Universe for Swetha 💜
 
-A minimal Borahae purple-galaxy birthday website with Swetha's anime-style portrait.
+
+A minimal Borahae purple-galaxy birthday website with anime-style portrait.
 
 ## Structure
 - `index.html` — page content
 - `css/style.css` — layout, colours and animations
 - `js/script.js` — stars, sparkles and interactions
-- `assets/images/swetha-anime.png` — illustrated portrait
+- `assets/images/anime.png` — illustrated portrait
 
 ## Run
 Open `index.html` in a browser, or use VS Code Live Server.
